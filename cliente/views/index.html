@@ -1,0 +1,74 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AliensAttack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="cliente/lib/phaser.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="cliente/lib/jquery.cookie.js"></script>
+    <script src="cliente/lib/underscore-min.js"></script>
+    <script src="cliente/lib/pagination.js"></script>
+    <link rel="stylesheet" href="cliente/src/estilos.css">
+    <script src="cliente/src/asteroides.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+    <script src="cliente/src/cliente.js"></script>
+    <script src="cliente/src/ini.js"></script> 
+    <script src="cliente/src/control.js"></script> 
+    <script src="cliente/src/com.js"></script> 
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#" id="ini1" onclick="comprobarUsuario();">AliensAttack</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#" id="ini2" onclick="com.obtenerResultados();">Resultados</a></li>
+          <li><a href="#" id="resul"></a> </li>
+          <!--<li><a href="#" onclick="mostrarActualizarEliminar();">Modificar perfil</a></li>
+          <li><a href="#" onclick="reset();">Salir</a></li>-->
+        </ul>
+        <ul class="nav navbar-nav navbar-right" id="inicio">
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid bg1 text-center" id="cnt1">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <div id="cabecera"></div>
+                <div id="resultados"></div>
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+   
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-4 text-center">                
+                <div id="partida1"></div>
+            </div>
+            <div class="col-sm-4 text-center">
+                <div id="partida2"></div>                    
+            </div>            
+            <div class="col-sm-2">
+            </div>
+            <div id="espacio"></div>
+        </div>
+    </div>
+    <footer class="container-fluid bg5 text-center" id="pie">
+            <p>AliensAttack es un proyecto desarrollado en la UCLM</p>
+            <p>Jose A. Gallud &copy; 2017</p>
+    </footer>
+    
+	<script type="text/javascript">
+		//nombrePartida();
+        //obtenerPartidas();
+        //mostrarLogin();
+        com=new Com();
+        comprobarUsuario();
+	</script>
+</body>
+</html>
